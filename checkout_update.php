@@ -4,7 +4,7 @@ $title = 'Đặt hàng';
 require_once './utils/utility.php';
 require_once './database/dbhelper.php';
 if (isLogin() == false) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 $userId = getSession('user')['id'];
@@ -17,7 +17,7 @@ if (!empty($_GET)) {
     $product = executeResult($sql, true);
     if ($product == null || count($product) == 0) {
         echo "<script>
-        window.location.href = 'main.php';
+        window.location.href = 'index.php';
         alert('Sản phẩm không tồn tại!');
         </script>";
         die();
@@ -29,7 +29,7 @@ if (!empty($_GET)) {
         $cart = $_SESSION['cart'];
     }
     if ($cart == null || count($cart) == 0) {
-        header('Location: main.php');
+        header('Location: index.php');
         die();
     }
 }
@@ -60,7 +60,7 @@ if (!empty($_POST)) {
     }
     unset($_SESSION['cart']);
     echo "<script>
-    window.location.href = 'main.php';
+    window.location.href = 'index.php';
     alert('Chúc mừng bạn đã đặt hàng thành công');
     </script>";
 }

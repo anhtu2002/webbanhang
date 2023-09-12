@@ -4,7 +4,7 @@ require_once './database/dbhelper.php';
 
 $user = validateToken();
 if ($user != null) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 
@@ -38,12 +38,12 @@ if ($data == null && count((array)$data) == 0) {
                    VALUE ('$user_id','$name','$phone','$adress')";
     execute($sql1);
     echo "<script>
-        window.location.href = 'main.php';
+        window.location.href = 'index.php';
         alert('Chúc mừng bạn đã đăng ký thành công');
         </script>";
 } else {
     echo "<script>
-        window.location.href = 'main.php';
+        window.location.href = 'index.php';
         alert('Email đã được đăng ký');
         </script>";
 }

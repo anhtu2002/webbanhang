@@ -5,7 +5,7 @@ require_once './utils/utility.php';
 require_once './database/dbhelper.php';
 if (isLogin() == false) {
     echo "<script>alert('Vui lòng đăng nhập')</script>";
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 include_once 'layouts/header.php';
@@ -95,18 +95,18 @@ include_once 'layouts/header.php';
 ?>
 
 <script type="text/javascript">
-function deleteItem(id) {
-    option = confirm('Bạn muốn xóa sản phẩm này?')
-    if (!option) {
-        return;
-    }
-    $.post('delete_cart.php', {
-        'id': id
-    }, function(data) {
-        location.reload();
-    })
+    function deleteItem(id) {
+        option = confirm('Bạn muốn xóa sản phẩm này?')
+        if (!option) {
+            return;
+        }
+        $.post('delete_cart.php', {
+            'id': id
+        }, function(data) {
+            location.reload();
+        })
 
-}
+    }
 </script>
 
 

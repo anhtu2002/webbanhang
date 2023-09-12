@@ -3,7 +3,7 @@ $title = 'Thông báo';
 require_once './database/dbhelper.php';
 require_once './utils/utility.php';
 if (!isLogin()) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 

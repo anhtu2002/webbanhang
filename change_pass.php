@@ -6,7 +6,7 @@ require_once './utils/utility.php';
 require_once './database/dbhelper.php';
 include_once './layouts/header.php';
 if (isLogin() == false) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 $userID = $_SESSION['user']['id'];
@@ -22,7 +22,7 @@ if (!empty($_POST)) {
         execute($sql);
         echo '<script>
         alert("Đổi mật khẩu thành công");
-        window.location.href = "main.php";</script>';
+        window.location.href = "index.php";</script>';
     } else {
         echo '<script>alert("Mật khẩu không chính xác!");
         window.location.href = "change_pass.php";
@@ -43,13 +43,16 @@ if (!empty($_POST)) {
             <form method="post" action="" id="login-form">
 
                 <div class="form-group">
-                    <input required="true" type="password" class="form-control" id="emailL" name="old_pass" placeholder="Mật khẩu cũ">
+                    <input required="true" type="password" class="form-control" id="emailL" name="old_pass"
+                        placeholder="Mật khẩu cũ">
                 </div>
                 <div class="form-group">
-                    <input required="true" type="password" class="form-control" id="password" name="new_pass" placeholder="Mật khẩu mới">
+                    <input required="true" type="password" class="form-control" id="password" name="new_pass"
+                        placeholder="Mật khẩu mới">
                 </div>
                 <div class="form-group">
-                    <input required="true" type="password" class="form-control" id="passwordL" name="" placeholder="Nhập lại mật khẩu">
+                    <input required="true" type="password" class="form-control" id="passwordL" name=""
+                        placeholder="Nhập lại mật khẩu">
                 </div>
                 <div id="message"></div>
                 <button disabled id="bt" type="submit" class="btn btn-success">
@@ -66,40 +69,40 @@ if (!empty($_POST)) {
 
 <?php include_once 'layouts/footer.php'; ?>
 <style>
-    .modal_change {
-        margin-top: 200px;
-        margin-left: 500px;
-        width: 436px;
-        height: 310px;
-        border: 2px solid #ccc;
-        margin-bottom: 180px;
-    }
+.modal_change {
+    margin-top: 200px;
+    margin-left: 500px;
+    width: 436px;
+    height: 310px;
+    border: 2px solid #ccc;
+    margin-bottom: 180px;
+}
 
-    #message {
-        margin-left: 15px;
-        color: red;
-    }
+#message {
+    margin-left: 15px;
+    color: red;
+}
 </style>
 <script>
-    const input1 = document.getElementById("password");
-    const input2 = document.getElementById("passwordL");
-    const message = document.getElementById("message");
-    const bt = document.getElementById("bt");
+const input1 = document.getElementById("password");
+const input2 = document.getElementById("passwordL");
+const message = document.getElementById("message");
+const bt = document.getElementById("bt");
 
-    // Function to check if the values are equal
-    function checkValues() {
-        const value1 = input1.value;
-        const value2 = input2.value;
+// Function to check if the values are equal
+function checkValues() {
+    const value1 = input1.value;
+    const value2 = input2.value;
 
-        if (value1 != value2) {
-            message.textContent = "Mật khẩu xác nhận không trùng khớp";
+    if (value1 != value2) {
+        message.textContent = "Mật khẩu xác nhận không trùng khớp";
 
-        } else {
-            message.textContent = "";
-            bt.disabled = false;
-        }
+    } else {
+        message.textContent = "";
+        bt.disabled = false;
     }
+}
 
-    // Attach the checkValues function to the input event of both inputs
-    input2.addEventListener("input", checkValues);
+// Attach the checkValues function to the input event of both inputs
+input2.addEventListener("input", checkValues);
 </script>

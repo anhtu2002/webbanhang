@@ -11,22 +11,28 @@
                 </div>
                 <form method="post" action="signup.php" id="SignUpForm" onsubmit="return validateSignUpForm();">
                     <div class="form-group">
-                        <input required="true" type="text" class="form-control" id="emailS" name="name" placeholder="Nhập tên của bạn">
+                        <input required="true" type="text" class="form-control" id="emailS" name="name"
+                            placeholder="Nhập tên của bạn">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="email" class="form-control" id="emailS" name="email" placeholder="Nhập email">
+                        <input required="true" type="email" class="form-control" id="emailS" name="email"
+                            placeholder="Nhập email">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="number" class="form-control" id="emailS" name="phone" placeholder="Nhập số điện thoại">
+                        <input required="true" type="number" class="form-control" id="emailS" name="phone"
+                            placeholder="Nhập số điện thoại">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="text" class="form-control" id="emailS" name="adress" placeholder="Nhập địa chỉ">
+                        <input required="true" type="text" class="form-control" id="emailS" name="adress"
+                            placeholder="Nhập địa chỉ">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="password" class="form-control" id="passwordS" name="password" placeholder="Nhập mật khẩu">
+                        <input required="true" type="password" class="form-control" id="passwordS" name="password"
+                            placeholder="Nhập mật khẩu">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="password" class="form-control" id="confirmation_passwordS" name="confirmation_password" placeholder="Nhập lại mật khẩu">
+                        <input required="true" type="password" class="form-control" id="confirmation_passwordS"
+                            name="confirmation_password" placeholder="Nhập lại mật khẩu">
                     </div>
                     <button type="submit" class="btn btn-success">
                         Đăng ký
@@ -60,10 +66,12 @@
                 <form method="post" action="login_sv.php" id="login-form" onsubmit="validateLoginForm()" ;>
 
                     <div class="form-group">
-                        <input required="true" type="email" class="form-control" id="emailL" name="email" placeholder="Nhập email">
+                        <input required="true" type="email" class="form-control" id="emailL" name="email"
+                            placeholder="Nhập email">
                     </div>
                     <div class="form-group">
-                        <input required="true" type="password" class="form-control" id="passwordL" name="password" placeholder="Nhập mật khẩu">
+                        <input required="true" type="password" class="form-control" id="passwordL" name="password"
+                            placeholder="Nhập mật khẩu">
                     </div>
                     <button type="submit" class="btn btn-success">
                         Đăng nhập
@@ -79,27 +87,27 @@
 </div>
 
 <script type="text/javascript">
-    $("#login-form").submit(function(e) {
-        e.preventDefault();
+$("#login-form").submit(function(e) {
+    e.preventDefault();
 
-        var form = $(this);
-        var actionUrl = form.attr('action');
+    var form = $(this);
+    var actionUrl = form.attr('action');
 
-        $.ajax({
-            type: "POST",
-            url: actionUrl,
-            data: form.serialize(),
-            success: function(data) {
-                if (data == "success") {
-                    location.reload();
-                    window.location.href = 'main.php';
-                } else alert(data);
-            }
-        })
+    $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(),
+        success: function(data) {
+            if (data == "success") {
+                location.reload();
+                window.location.href = 'index.php';
+            } else alert(data);
+        }
     })
+})
 </script>
 <style>
-    h3:hover {
-        cursor: pointer;
-    }
+h3:hover {
+    cursor: pointer;
+}
 </style>

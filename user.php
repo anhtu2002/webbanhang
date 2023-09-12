@@ -5,7 +5,7 @@ require_once './database/dbhelper.php';
 require_once './utils/utility.php';
 include_once './layouts/header.php';
 if (isLogin() == false) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 

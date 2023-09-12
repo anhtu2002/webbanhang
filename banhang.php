@@ -4,7 +4,7 @@ $title = 'Bán hàng';
 require_once './utils/utility.php';
 require_once './database/dbhelper.php';
 if (isLogin() == false) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 include_once './layouts/header.php';
@@ -66,8 +66,7 @@ if (!empty($_POST)) {
                     <input required="true" type="file" name="image" />
                     <div>
                         <h4 class="input-name">Tên sản phẩm:</h4>
-                        <input required="true" type="text" name="name" placeholder="Không quá 150 ký tự"
-                            style="width: 100%;">
+                        <input required="true" type="text" name="name" placeholder="Không quá 150 ký tự" style="width: 100%;">
                     </div>
                     <div class="sell-category">
                         <h4 class="input-name">Danh mục:</h4>
@@ -96,8 +95,7 @@ if (!empty($_POST)) {
                     </div>
                     <div>
                         <h4 class="input-name">Giá bán:</h4>
-                        <input required="true" type="text" name="price" id="currency-field" data-type="currency"
-                            maxlength="11">
+                        <input required="true" type="text" name="price" id="currency-field" data-type="currency" maxlength="11">
                     </div>
                     <button type="submit" class="btn" style="margin-left: 0;">Đăng bán</button>
                 </form>
@@ -158,21 +156,21 @@ if (!empty($_POST)) {
 <?php include_once 'layouts/footer.php'; ?>
 
 <script type="text/javascript">
-$("input[data-type='currency']").on({
-    keyup: function() {
-        formatCurrency($(this));
-    },
-});
+    $("input[data-type='currency']").on({
+        keyup: function() {
+            formatCurrency($(this));
+        },
+    });
 
-function deleteProduct() {
-    option = confirm('Bạn muốn xóa sản phẩm này?')
-    if (!option) {
-        return;
+    function deleteProduct() {
+        option = confirm('Bạn muốn xóa sản phẩm này?')
+        if (!option) {
+            return;
+        }
+
     }
 
-}
-
-function confirm_delete() {
-    return confirm("Bạn muốn hủy đơn hàng này?")
-}
+    function confirm_delete() {
+        return confirm("Bạn muốn hủy đơn hàng này?")
+    }
 </script>

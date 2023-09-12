@@ -4,7 +4,7 @@ $title = 'Chỉnh sửa';
 require_once './utils/utility.php';
 require_once './database/dbhelper.php';
 if (isLogin() == false || empty($_GET)) {
-    header('Location: main.php');
+    header('Location: index.php');
     die();
 }
 include_once 'layouts/header.php';

@@ -30,7 +30,7 @@ if (isLogin() == false) {
     <script src="./assets/js/script.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
@@ -46,7 +46,7 @@ if (isLogin() == false) {
                         </a>
                         <ul class="navbar-list">
                             <li class="navbar-item navbar-item--separate">
-                                <a href="main.php" class="navbar-item-link">Trang chủ</a>
+                                <a href="index.php" class="navbar-item-link">Trang chủ</a>
                             </li>
                             <li class="navbar-item navbar-item--separate">
                                 <a href="<?php if (isLogin() == true) {
@@ -62,11 +62,9 @@ if (isLogin() == false) {
                             <li class="navbar-item">
                                 <div>
                                     <span class="no-pointer">Kết nối</span>
-                                    <a href="https://www.facebook.com/duy.khuat.79" target="_blank"
-                                        class="navbar-item-link">
+                                    <a href="https://www.facebook.com/duy.khuat.79" target="_blank" class="navbar-item-link">
                                         <i class="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/duy.khuat.79/" target="_blank"
-                                        class="navbar-item-link">
+                                    <a href="https://www.instagram.com/duy.khuat.79/" target="_blank" class="navbar-item-link">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </div>
@@ -80,8 +78,7 @@ if (isLogin() == false) {
                                 </a>
                             </list>
                             <list class="navbar-item">
-                                <a href="https://www.facebook.com/messages/t/100025087453710" target="_blank"
-                                    class="navbar-item-link">
+                                <a href="https://www.facebook.com/messages/t/100025087453710" target="_blank" class="navbar-item-link">
                                     <i class="fa-regular fa-circle-question"></i>
                                     Hỗ trợ
                                 </a>
@@ -114,10 +111,8 @@ if (isLogin() == false) {
                                     <ul class="user-info__list js-user-info">
                                         <li class="user-info__list-item" onclick="window.location.href='user.php'">Xem
                                             thông tin</li>
-                                        <li class="user-info__list-item"
-                                            onclick="window.location.href='change_pass.php'">Đổi mật khẩu</li>
-                                        <li class="user-info__list-item"><a href="logout.php"
-                                                style="text-decoration: none; color: #000;">Đăng xuất</a></li>
+                                        <li class="user-info__list-item" onclick="window.location.href='change_pass.php'">Đổi mật khẩu</li>
+                                        <li class="user-info__list-item"><a href="logout.php" style="text-decoration: none; color: #000;">Đăng xuất</a></li>
                                     </ul>
                                 </div>
                             </list>
@@ -135,14 +130,13 @@ if (isLogin() == false) {
                         </ul>
                     </nav>
                     <div class="header-width-search">
-                        <a href="main.php" class="header__logo">
+                        <a href="index.php" class="header__logo">
                             <img src="./assets/img/logo.jpg" alt="" class="header--logo__image">
                         </a>
 
                         <div class="header__search">
-                            <form action="main.php" class="header__search-form">
-                                <input type="text" class="header__search-input" name="search"
-                                    placeholder="Nhập để tìm kiếm">
+                            <form action="index.php" class="header__search-form">
+                                <input type="text" class="header__search-input" name="search" placeholder="Nhập để tìm kiếm">
                                 <button type="submit" class="btn btn-search">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
