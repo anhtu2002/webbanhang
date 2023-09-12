@@ -30,7 +30,7 @@ if (isLogin() == false) {
     <script src="./assets/js/script.js"></script>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
